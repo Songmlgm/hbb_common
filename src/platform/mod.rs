@@ -63,9 +63,7 @@ extern "C" fn breakdown_signal_handler(sig: i32) {
     }
     unsafe {
         #[allow(static_mut_refs)]
-        if let Some(callback) = &GLOBAL_CALLBACK {
-            callback()
-        }
+
     }
     exit(0);
 }
